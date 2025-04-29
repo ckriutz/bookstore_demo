@@ -1,0 +1,64 @@
+@model List<Book>
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="py-5 text-center rounded-3" style="background-color: #f8f4e6;">
+    <div class="container">
+        <h1 class="display-4">Welcome to The Cellar Bookstore</h1>
+        <p class="lead">Your cozy corner bookstore in the heart of the Midwest</p>
+        <hr class="my-4">
+        <p>Discover stories that feel like home, from classics to contemporary gems.</p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Featured Books</h2>
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@book.Author</h6>
+                        <p class="card-text">
+                            <small class="text-muted">Genre: @book.Genre</small><br>
+                            <small class="text-muted">Published: @book.PublishedDate.Year</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="mb-5">
+        <div class="card shadow-sm" style="background-color: #f8f4e6;">
+            <div class="card-body">
+                <h3 class="card-title">About Us</h3>
+                <p class="card-text">The Cellar Bookstore has been a cornerstone of our community since 1985. Our carefully curated collection 
+                   spans everything from heartland poetry to modern fiction, all housed in our charming historic basement location.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="card shadow-sm" style="background-color: #f8f4e6;">
+            <div class="card-body">
+                <h3 class="card-title">Visit Us</h3>
+                <p class="card-text">
+                    <strong>Address:</strong><br>
+                    123 Main Street<br>
+                    Heartland City, MW 12345
+                </p>
+                <p class="card-text">
+                    <strong>Hours:</strong><br>
+                    Monday-Saturday: 10am-8pm<br>
+                    Sunday: 12pm-6pm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

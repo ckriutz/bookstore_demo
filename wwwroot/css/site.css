@@ -1,0 +1,67 @@
+:root {
+    --midwest-brown: #8B4513;
+    --warm-beige: #f8f4e6;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: var(--warm-beige);
+    font-family: 'Georgia', serif;
+}
+
+.navbar {
+    background-color: var(--midwest-brown) !important;
+}
+
+.navbar-brand {
+    font-family: 'Palatino', serif;
+    font-size: 1.5rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: var(--midwest-brown);
+    color: var(--warm-beige) !important;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.jumbotron {
+    background-image: linear-gradient(rgba(248, 244, 230, 0.9), rgba(248, 244, 230, 0.9)),
+                      url('../images/books-background.jpg');
+    background-size: cover;
+    color: var(--midwest-brown);
+    padding: 4rem 2rem;
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--midwest-brown);
+    font-family: 'Palatino', serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
